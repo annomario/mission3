@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="../styles/main.css">
+    <link rel="stylesheet" href="../styles/login.css">
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="navbar-container">
+            <a href="#" class="navbar-logo">
+                <img src="../images/logo-videobelajar.svg" alt="Logo videobelajar">
+            </a>
+        </div>
+    </nav>
+    <main class="container">
+        <div class="login-container body-medium-regular">
+            <div class="login-header">
+                <h1 class="heading-3">Masuk ke Akun</h1>
+                <p>Yuk, lanjutin belajarmu di videobelajar.</p>
+            </div>
+            <form class="login-form" action="">
+                <div class="form-field-wrapper">
+                    <div class="form-field">
+                        <label for="email">E-Mail <span class="required">*</span></label>
+                        <input class="input-text" type="email" name="email" id="email">
+                    </div>
+                    <div class="form-field">
+                        <label for="password">Kata Sandi <span class="required">*</span></label>
+                        <div class="password-wrapper">
+                            <input class="input-text-password" type="password" name="password" id="password">
+                            <img src="../images/logo-eyeoff.svg" alt="Toggle Password " class="toggle-password">
+                        </div>
+                    </div>
+                    <div class="form-info-wrapper body-medium-medium">
+                        <a href="#">Lupa Password?</a>
+                    </div>
+                </div>
+                <div class="form-button-wrapper body-medium-bold">
+                    <button class="btn-primary-contained">Masuk</button>
+                    <button class="btn-primary-shadow">Daftar</button>
+                </div>
+                <div class="form-divider">
+                    <span>atau</span>
+                </div>
+                <div class="form-google-wrapper">
+                    <button class="btn-unstyled btn-google body-medium-bold">
+                        <img src="../images/logo-google.svg" alt="Google Icon" class="google-icon">
+                        <span>Masuk dengan Google</span>
+                    </button>
+                </div>
+            </form>
+        </div>
+    </main>
+</body>
+
+</html>

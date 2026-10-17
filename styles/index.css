@@ -1,0 +1,495 @@
+.site-header {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    width: 100%;
+    background-color: var(--other-primary-background);
+    border-bottom: 1px solid var(--other-border);
+}
+
+.navbar {
+    width: 100%;
+    background-color: var(--other-primary-background);
+    border-bottom: 1px solid var(--other-border);
+}
+
+.navbar-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 80px;
+    margin: 0 auto;
+    padding: 12px 120px;
+}
+
+.navbar-logo {
+    display: flex;
+}
+
+/* ---------- Menu kanan ---------- */
+.navbar-menu {
+    display: flex;
+    align-items: center;
+    gap: 36px;
+}
+
+.navbar-link {
+    color: var(--text-dark-secondary);
+    text-decoration: none;
+}
+
+.navbar-link:hover {
+    color: var(--text-dark-primary);
+}
+
+.navbar-profile {
+    display: flex;
+}
+
+.navbar-avatar {
+    width: 44px;
+    height: 44px;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+/* ---------- Tombol hamburger: disembunyikan di desktop ---------- */
+.navbar-toggle {
+    display: none;
+    padding: 0;
+    border: 0;
+    background: none;
+    cursor: pointer;
+}
+
+.navbar-toggle img {
+    display: block;
+    width: 24px;
+    height: 24px;
+}
+
+.home-main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 64px 120px;
+    gap: 64px;
+    background-color: var(--color-background);
+}
+
+/* section hero */
+
+.hero-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 24px;
+
+    width: 100%;
+    max-width: 1200px;
+    height: 400px;
+    padding: 82px 140px 64px;
+    border-radius: 10px;
+
+    text-align: center;
+    color: var(--text-light-primary);
+
+    background:
+        linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
+        url("/images/hero-banner.png") center / cover no-repeat;
+}
+
+.hero-title {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+}
+
+.hero-button {
+    text-decoration: none;
+}
+
+/* section card */
+
+.card-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 32px;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.section-header {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    width: 100%;
+    gap: 10px;
+}
+
+.section-title {
+    color: var(--text-dark-primary);
+}
+
+.section-subtitle {
+    color: var(--text-dark-secondary);
+}
+
+/* ---------- Tab kategori ---------- */
+
+.course-tabs ul {
+    display: flex;
+    gap: 36px;
+    overflow-x: auto;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.course-tabs a {
+    position: relative;
+    display: block;
+    flex-shrink: 0;
+    padding: 12px 0 18px 0;
+    white-space: nowrap;
+    color: var(--text-dark-secondary);
+}
+
+.course-tabs a:hover {
+    color: var(--main-tertiary-default);
+}
+
+/* tab aktif: warna aksen + garis bawah pendek */
+.course-tabs a[aria-current="page"] {
+    color: var(--main-tertiary-default);
+}
+
+.course-tabs a[aria-current="page"]::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 52px;
+    height: 6px;
+    border-radius: 10px;
+    background-color: var(--main-tertiary-default);
+}
+
+/* ---------- Grid kartu ---------- */
+.course-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 384px);
+    justify-content: center;
+    gap: 32px 24px;
+}
+
+/* ---------- Kartu ---------- */
+.course-card {
+    position: relative;
+    /* acuan untuk tautan yang menutupi kartu */
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    width: 384px;
+    height: 100%;
+    padding: 20px;
+    border: 1px solid var(--other-border);
+    border-radius: 10px;
+    background-color: var(--other-primary-background);
+}
+
+.course-card-image {
+    width: 344;
+    height: 193px;
+    border-radius: 10px;
+    object-fit: cover;
+    background-color: var(--other-border);
+    /* terlihat bila gambar belum ada */
+}
+
+.course-card-body {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.course-card-title {
+    color: var(--text-dark-primary);
+}
+
+/* tautan judul diperluas menutupi seluruh kartu */
+.course-card-link::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+}
+
+.course-card-link:focus-visible {
+    outline: none;
+}
+
+/* batasi deskripsi maksimal 2 baris */
+.course-card-desc {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    color: var(--text-dark-secondary);
+    line-height: 1.4;
+}
+
+.course-card-instructor {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.course-card-avatar {
+    flex-shrink: 0;
+    width: 40px;
+    height: 40px;
+    border-radius: 10px;
+    object-fit: cover;
+    background-color: var(--other-base-background);
+}
+
+.course-card-instructor-name {
+    color: var(--text-dark-primary);
+}
+
+.course-card-instructor-role {
+    color: var(--text-dark-secondary);
+}
+
+.course-card-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: auto;
+    /* dorong ke dasar kartu */
+}
+
+.course-card-rating {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+/* bintang: teks ★ diberi gradasi dua warna sesuai nilai --rating */
+.rating-stars {
+    font-size: 18px;
+    letter-spacing: 1px;
+    line-height: 1;
+    background: linear-gradient(90deg, var(--warning-default) var(--rating), var(--other-border) var(--rating));
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+}
+
+.rating-count {
+    color: var(--text-dark-secondary);
+    text-decoration: underline;
+}
+
+.course-card-price {
+    color: var(--main-primary-default);
+}
+
+/* section cta */
+
+.newsletter {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    max-width: 1200px;
+    min-height: 400px;
+    padding: 64px 140px;
+    gap: 40px;
+    border-radius: 4px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+
+    text-align: center;
+    color: var(--text-light-primary);
+
+    background:
+        linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
+        url("../images/newsletter-banner.png") center / cover no-repeat;
+}
+
+.newsletter-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 4px;
+}
+
+.newsletter-label {
+    color: var(--text-light-secondary);
+}
+
+.newsletter-title {
+    color: var(--text-light-primary);
+}
+
+.newsletter-text {
+    max-width: 525px;
+    color: var(--other-base-background);
+}
+
+.newsletter-form {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    width: 100%;
+    max-width: 525px;
+    padding: 8px 8px 8px 32px;
+    border-radius: 8px;
+    background-color: var(--other-primary-background);
+}
+
+
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}
+
+.newsletter-input {
+    flex: 1;
+    min-width: 0;
+    height: 42px;
+    border: 0;
+    outline: none;
+    background: transparent;
+    color: var(--text-dark-primary);
+}
+
+.newsletter-input::placeholder {
+    color: var(--text-dark-secondary);
+}
+
+/* footer */
+
+.site-footer {
+    width: 100%;
+    background-color: var(--other-primary-background);
+    padding: 60px 120px;
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 40px;
+}
+
+/* Kolom Kiri */
+.footer-brand {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    color: var(--text-dark-primary);
+}
+
+.footer-info {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.brand-address {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    font-style: normal;
+}
+
+/* Kelompok Tautan Kanan */
+.footer-links-group {
+    display: flex;
+    gap: 48px;
+    flex-wrap: wrap;
+    color: var(--text-dark-secondary);
+}
+
+.footer-column {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.footer-heading {
+    color: var(--text-dark-primary);
+}
+
+.footer-column ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.footer-column a {
+    text-decoration: none;
+    color: var(--text-dark-secondary);
+    transition: color 0.2s;
+}
+
+.footer-column a:hover {
+    color: var(--main-tertiary-default);
+}
+
+/* Bagian Bawah (Copyright & Social Media) */
+.footer-bottom {
+    max-width: 1200px;
+    margin: 40px auto 0;
+    padding: 20px 20px 0;
+    border-top: 1px solid var(--other-border);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.footer-copyright {
+    color: var(--text-dark-secondary);
+}
+
+.footer-socials {
+    display: flex;
+    gap: 15px;
+}
+
+.footer-socials a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 35px;
+    height: 35px;
+    text-decoration: none;
+}
