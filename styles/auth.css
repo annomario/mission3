@@ -1,7 +1,3 @@
-p {
-    color: var(--text-dark-secondary);
-}
-
 .container {
     width: 100%;
     min-height: 100vh;
@@ -30,6 +26,10 @@ p {
     flex-direction: column;
     align-items: center;
     gap: 10px;
+}
+
+.auth-header p {
+    color: var(--text-dark-secondary);
 }
 
 .auth-form {
@@ -140,7 +140,6 @@ p {
 .form-info-wrapper a {
     display: flex;
     justify-content: flex-end;
-    text-decoration: none;
     color: var(--text-dark-secondary);
 }
 
@@ -154,7 +153,6 @@ p {
 .form-button-wrapper a {
     display: inline-flex;
     justify-content: center;
-    text-decoration: none;
 }
 
 .form-divider {
