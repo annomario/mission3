@@ -151,6 +151,12 @@ p {
     gap: 16px;
 }
 
+.form-button-wrapper a {
+    display: inline-flex;
+    justify-content: center;
+    text-decoration: none;
+}
+
 .form-divider {
     display: flex;
     align-items: center;
