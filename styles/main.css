@@ -287,3 +287,15 @@ ul {
 .navbar-logo {
     display: flex;
 }
+
+@media (max-width: 767px) {
+    .navbar-container {
+        height: 74px;
+        padding: 16px 24px;
+    }
+
+    .navbar-logo img {
+        width: 152px;
+        height: auto;
+    }
+}
